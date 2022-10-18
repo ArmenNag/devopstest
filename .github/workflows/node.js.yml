@@ -17,7 +17,7 @@ jobs:
           scope: '@armennag'
       
       - run: |
-             npm login --scope=@armennag --registry=https://npm.pkg.github.com/@armennag
+             npm login --scope=@armennag --registry=https://npm.pkg.github.com/
 
              npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/@armennag
           
