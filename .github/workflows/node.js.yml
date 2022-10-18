@@ -20,14 +20,14 @@ jobs:
           echo "$(</home/runner/work/_temp/.npmrc )" 
           cd /home/runner/work/_temp/
           echo $(ls)
-          echo $(_github_workflow_runner_file_commands)
+          echo $(_github_workflow)
 
           
           
       - uses: actions/upload-artifact@v3
         with:
           name: logs
-          path: home/runner/work/**
+          path: home/runner/work/_temp
       
       
       
