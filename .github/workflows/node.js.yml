@@ -16,13 +16,12 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       
-      
-    
-      - run: npm install
       - run: |
           npm config set registry https://npm.pkg.github.com/armennag --loglevel silly 
-          npm config set //https://npm.pkg.github.com/armennag/:_authToken ${NPM_TOKEN}
+          npm config set //https://npm.pkg.github.com/armennag/:_authToken=${NPM_TOKEN}
           npm unpublish devopstest@1.0.0 --force --loglevel silly
+      
+      
       
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
