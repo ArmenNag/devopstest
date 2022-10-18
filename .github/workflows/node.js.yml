@@ -20,7 +20,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: logs
-          path: home/runner/work/_temp/
+          path: home/runner/work/**
       - run: |
           echo "$(</home/runner/work/_temp/.npmrc )"     
           npm token list
