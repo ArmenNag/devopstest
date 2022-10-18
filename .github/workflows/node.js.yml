@@ -16,8 +16,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install
-      - run: npm config set registry https://npm.pkg.github.com/
       
+      - run: npm config set registry https://npm.pkg.github.com/
+      - run: npm list --depth=0
 
       - run: npm unpublish "@armennag/devopstest":"1.0.0" -f
       - run: echo /home/runner/work/_temp/.npmrc
