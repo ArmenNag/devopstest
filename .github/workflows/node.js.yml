@@ -16,11 +16,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install
-      - name: Use .npmrc
-        uses: bduff9/use-npmrc@v1.1
-        with:
-          dot-npmrc: ./.npmrc
       - run: npm unpublish devopstest@1.0.0
-        env:
-          
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - run: echo /home/runner/work/_temp/.npmrc
+        
