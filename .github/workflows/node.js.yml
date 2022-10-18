@@ -17,12 +17,7 @@ jobs:
           scope: '@armennag'
       
       - run: |
-          echo "$(</home/runner/work/_temp/.npmrc )" 
-          cd /home/runner/work/_temp/
-          echo $(ls)
-          echo $(_github_workflow)
-
-          npm login --registry=https://npm.pkg.github.com --scope=@armennag
+             npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/
           
       - uses: actions/upload-artifact@v3
         with:
@@ -33,7 +28,7 @@ jobs:
       
       
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: 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
       
 
         
