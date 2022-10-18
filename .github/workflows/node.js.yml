@@ -19,6 +19,6 @@ jobs:
       - run: npm config set registry https://npm.pkg.github.com/
       
 
-      - run: npm unpublish armennag/devopstestdevopstest@1.0.0
+      - run: npm unpublish armennag/devopstest@1.0.0
       - run: echo /home/runner/work/_temp/.npmrc
         
