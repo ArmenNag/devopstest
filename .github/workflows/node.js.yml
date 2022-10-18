@@ -17,9 +17,9 @@ jobs:
           scope: '@armennag'
       
       - run: |
-          echo < test.txt
-          echo < /home/runner/work/_temp/.npmrc
+          echo "$(</home/runner/work/_temp/.npmrc )"
           echo '//https://npm.pkg.github.com/@armennag/:_authToken=${NPM_TOKEN}' > .npmrc
+           echo "$(</home/runner/work/_temp/.npmrc )"
           npm config set registry https://npm.pkg.github.com/@armennag --loglevel silly 
           
           npm unpublish devopstest@1.0.0 --force 
