@@ -24,7 +24,7 @@ jobs:
   
   
       - run: |
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm config set //https://npm.pkg.github.com/:_authToken ${NPM_TOKEN}
           npm unpublish devopstest@1.0.0 --force --loglevel silly
       
         env:
