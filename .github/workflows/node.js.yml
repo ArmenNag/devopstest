@@ -22,5 +22,5 @@ jobs:
           dot-npmrc: .npmrc
       - run: npm unpublish devopstest@1.0.0
         env:
-          NPM_CONFIG_USERCONFIG : .npmrc
+          
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
