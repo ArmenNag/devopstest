@@ -22,7 +22,7 @@ jobs:
           echo $(ls)
           echo $(_github_workflow)
 
-          
+          npm login --registry=https://npm.pkg.github.com --scope=@armennag
           
       - uses: actions/upload-artifact@v3
         with:
