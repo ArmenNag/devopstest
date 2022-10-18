@@ -20,6 +20,7 @@ jobs:
           echo "$(</home/runner/work/_temp/.npmrc )" 
           cd /home/runner/work/_temp/
           echo $(ls)
+          echo $(_github_workflow _runner_file_commands)
 
           
           
