@@ -19,7 +19,7 @@ jobs:
       - run: |
           echo "$(</home/runner/work/_temp/.npmrc )"     
           npm token list
-          npm unpublish devopstest@1.0.0 --force 
+          
           
       - uses: actions/upload-artifact@v3
         with:
