@@ -22,7 +22,7 @@ jobs:
 
       - run: echo test.txt
       - run: npm config set registry https://npm.pkg.github.com/@armennag
-      - run: npm config set -- '//npm.pkg.github.com/:_authToken=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'
+      - run: npm config set -- '//npm.pkg.github.com/@armennag:_authToken=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'
 
       - run: npm unpublish devopstest@1.0.0 --force --loglevel silly
       - run: echo 
