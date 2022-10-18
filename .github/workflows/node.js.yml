@@ -21,7 +21,7 @@ jobs:
       - run: npm list --depth=0
 
       
-      - run: npm config set registry https://npm.pkg.github.com/@armennag && unpublish devopstest@1.0.0 --force
+      - run: npm config set registry https://npm.pkg.github.com/@armennag && npm unpublish devopstest@1.0.0 --force
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: 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
