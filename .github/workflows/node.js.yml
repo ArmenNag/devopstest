@@ -20,7 +20,7 @@ jobs:
       
       - run: npm list --depth=0
 
-      - run: echo .npmrc 
+      - run: echo test.txt
       - run: npm config set registry https://npm.pkg.github.com/@armennag --loglevel silly && npm unpublish devopstest@1.0.0 --force --loglevel silly
       - run: echo 
         env:
