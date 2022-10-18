@@ -20,6 +20,11 @@ jobs:
       - run: npm config set registry https://npm.pkg.github.com/@armennag
       - run: npm list --depth=0
 
+      
       - run: npm unpublish devopstest@1.0.0 --force
+        env:  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo /home/runner/work/_temp/.npmrc
         
