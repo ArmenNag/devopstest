@@ -19,7 +19,7 @@ jobs:
       - name: Use .npmrc
         uses: bduff9/use-npmrc@v1.1
         with:
-          dot-npmrc: .np
+          dot-npmrc: ./.npmrc
       - run: npm unpublish devopstest@1.0.0
         env:
           
