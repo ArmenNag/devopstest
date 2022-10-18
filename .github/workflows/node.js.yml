@@ -17,7 +17,7 @@ jobs:
           scope: '@armennag'
       
       - run: |
-             npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/
+             npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/@armennag
           
       - uses: actions/upload-artifact@v3
         with:
