@@ -28,7 +28,7 @@ jobs:
       
       
         env:
-          NPM_TOKEN: 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
+          NPM_TOKEN: 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
       
 
         
