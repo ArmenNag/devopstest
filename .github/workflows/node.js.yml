@@ -16,6 +16,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install
-      - run: npm publish
+      - run: npm unpublish devopstest@1.0.0
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
