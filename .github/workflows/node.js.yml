@@ -17,10 +17,7 @@ jobs:
           scope: '@armennag'
       
       
-      - name: Use .npmrc
-        uses: bduff9/use-npmrc@v1.1
-        with:
-          dot-npmrc: ${{ secrets.DOT_NPMRC }}
+    
       - run: npm install
       - run: |
           npm config set //https://npm.pkg.github.com/:_authToken ${NPM_TOKEN}
