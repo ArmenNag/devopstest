@@ -15,11 +15,11 @@ jobs:
           node-version : 16
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
+      - run: npm install
       - name: Use .npmrc
         uses: bduff9/use-npmrc@v1.1
         with:
           dot-npmrc: .npmrc
-      - run: npm install
       - run: npm unpublish devopstest@1.0.0
         env:
           NPM_CONFIG_USERCONFIG : .npmrc
