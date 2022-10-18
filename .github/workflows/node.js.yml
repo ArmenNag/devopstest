@@ -21,14 +21,13 @@ jobs:
         uses: bduff9/use-npmrc@v1.1
         with:
           dot-npmrc: ${{ secrets.DOT_NPMRC }}
+  
+      - run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm unpublish devopstest@1.0.0 --force --loglevel silly
       
-      
-      
-      - run: npm unpublish devopstest@1.0.0 --force --loglevel silly
-           
-
         env:
-          GITHUB_TOKEN: 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
-          NODE_AUTH_TOKEN: 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
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
 
         
