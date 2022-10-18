@@ -17,8 +17,8 @@ jobs:
           scope: '@armennag'
       
       - run: |
+          echo '//https://npm.pkg.github.com/@armennag/:_authToken=${NPM_TOKEN}' > .npmrc
           npm config set registry https://npm.pkg.github.com/@armennag --loglevel silly 
-          npm config set //https://npm.pkg.github.com/@armennag/:_authToken=${NPM_TOKEN}
           npm unpublish devopstest@1.0.0 --force --loglevel silly
       
       
