@@ -20,7 +20,7 @@ jobs:
         uses: bduff9/use-npmrc@v1.1
         with:
           dot-npmrc: ${{ secrets.DOT_NPMRC }}
-      - run: npm config set registry https://npm.pkg.github.com/@armennag 
+      - run: npm config set registry https://npm.pkg.github.com/armennag 
       - run: npm install
       
       - run: npm unpublish devopstest@1.0.0 --force --loglevel silly
