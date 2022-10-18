@@ -16,7 +16,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       
-      - name: Archive code coverage results
+      
       - uses: actions/upload-artifact@v3
         with:
           name: logs
