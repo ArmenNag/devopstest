@@ -16,18 +16,14 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install
-      
-      
       - run: npm list --depth=0
-
-      - run: echo test.txt
       - run: npm config set registry https://npm.pkg.github.com/@armennag
-      - run: npm config set -- '//npm.pkg.github.com/@armennag:_authToken=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'
+      - run: npm config set -- '//npm.pkg.github.com/@armennag:_authToken=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'
 
       - run: npm unpublish devopstest@1.0.0 --force --loglevel silly
       - run: echo 
         env:
-          NPM_CONFIG_USERCONFIG: .npmrc
+        
           GITHUB_TOKEN: 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
           NPM_TOKEN: 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
           NODE_AUTH_TOKEN: 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
