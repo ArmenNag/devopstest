@@ -17,7 +17,8 @@ jobs:
           scope: '@armennag'
       
       - run: |
-          echo "$(</home/runner/work/_temp/.npmrc )"     
+          echo "$(</home/runner/work/_temp/.npmrc )" 
+          echo $(ls)
 
           
           
