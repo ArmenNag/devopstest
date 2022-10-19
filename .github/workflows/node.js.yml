@@ -25,7 +25,7 @@ jobs:
             for(version of response.data) {
                 if (version.metadata.container.tags.length == 0) {
                     console.log("delete " + version.id)
-                    const deleteResponse = await github.request("DELETE /ArmenNag/packages/container/devopstest/versions/" + version.id, { });
+                    const deleteResponse = await github.request("DELETE /ArmenNag/packages/npm/devopstest/versions/" + version.id, { });
                     console.log("status " + deleteResponse.status)
                 }
             }
