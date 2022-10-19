@@ -21,6 +21,6 @@ jobs:
           package-name: 'devopstest@1.0.0'
           min-versions-to-keep: 5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
+          NPM_TOKEN: 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
+          NODE_AUTH_TOKEN: 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
