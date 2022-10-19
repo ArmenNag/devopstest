@@ -17,7 +17,7 @@ jobs:
       - run: npm install  
       - uses: actions/github-script@v3
         with:
-          github-token: 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
+          github-token:  ${{ secrets.GITHUB_TOKEN }}
           script: |
             const response = await github.request("GET /ArmenNag/packages/container/devopstest/versions",
               { per_page: 100
