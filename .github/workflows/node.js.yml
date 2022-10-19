@@ -18,16 +18,7 @@ jobs:
       - run: |
              npm config set registry https://npm.pkg.github.com/@armennag 
              npm install @armennag/devopstest@1.0.3
-             
-          
 
-      
-      
-      
-      
-        env:
-          NPM_TOKEN: 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
-          NODE_AUTH_TOKEN: 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
       
 
         
