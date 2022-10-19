@@ -20,7 +20,7 @@ jobs:
              npm config set _auth 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
              npm config set email armen.nagapetian@submittable.com
              
-             npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/@armennag
+             npm unpublish devopstest@1.0.0
           
       - uses: actions/upload-artifact@v3
         with:
