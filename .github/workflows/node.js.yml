@@ -15,12 +15,11 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install  
-      - run | 
-            touch emptyfile  
-            gh api /orgs/ArmenNag/packages/npm/devopstest/versions 
-            --paginate -q '.[].id' | tail -n +101 | xargs -n1 -I {} gh api 
-            --method DELETE /orgs/ArmenNag/packages/npm/devopstest/versions/3 
-            --input emptyfile
+      - uses: actions/delete-package-versions@v3
+        with:
+          owner: '@armennag'
+          package-name: 'devopstest'
+          min-versions-to-keep: 5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
