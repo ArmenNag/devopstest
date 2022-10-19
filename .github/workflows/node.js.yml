@@ -15,12 +15,25 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@armennag'
       - run: npm install  
-      - uses: actions/delete-package-versions@v3
+      - uses: actions/github-script@v3
         with:
-          owner: 'ArmenNag'
-          package-name: 'devopstest@1.0.3'
-          min-versions-to-keep: 5
+          github-token: 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
+          script: |
+            const response = await github.request("GET /ArmenNag/packages/container/devopstest/versions",
+              { per_page: 100
+            });
+            for(version of response.data) {
+                if (version.metadata.container.tags.length == 0) {
+                    console.log("delete " + version.id)
+                    const deleteResponse = await github.request("DELETE /ArmenNag/packages/container/devopstest/versions/" + version.id, { });
+                    console.log("status " + deleteResponse.status)
+                }
+            }
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ArmenNag
+          PACKAGE_NAME: 'devopstest'
+          PER_PAGE: 100
+      #  env:
+       #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #  NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         # NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
