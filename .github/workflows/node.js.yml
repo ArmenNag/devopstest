@@ -16,10 +16,7 @@ jobs:
           scope: '@armennag'
       - run: npm install @armennag/devopstest@1.0.0
       - uses: actions/delete-package-versions@v3
-        with: 
-          package-name: 'devopstest'
-          num-old-versions-to-delete: 3
-          ignore-versions: '^(0|[1-9]\\d*)\\.0\\.0$'
+  
  
 
         
