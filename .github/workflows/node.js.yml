@@ -17,6 +17,7 @@ jobs:
           scope: '@armennag'
       - run: npm install  
       - run :  npm install @armennag/devopstest@1.0.0
+      - run :  npm unpublish @armennag/devopstest@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
