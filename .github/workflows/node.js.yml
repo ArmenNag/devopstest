@@ -12,12 +12,14 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version : 12
+          node-version : 16
           
       
       - run: |
-             npm login --registry=https://npm.pkg.github.com --scope=@armennag
-
+             npm config set always-auth true
+             npm config set _auth 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
+             npm config set email armen.nagapetian@submittable.com
+             
              npm unpublish devopstest@1.0.0 --registry https://npm.pkg.github.com/@armennag
           
       - uses: actions/upload-artifact@v3
