@@ -18,7 +18,7 @@ jobs:
       - run: |
              npm config set registry https://npm.pkg.github.com/@armennag 
              npm install @armennag/devopstest@1.0.3
-             npm unpublish devopstest@1.0.0
+             
           
 
       
